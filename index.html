@@ -113,7 +113,7 @@
                     <div class="mb-3">
                         <div class="flex items-center">
                             <input type="checkbox" id="includeWeed" name="includeWeed" class="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-600 rounded bg-gray-700">
-                            <label for="includeWeed" class="ml-2 block text-sm text-gray-300">Include cannabis costs</label>
+                            <label for="includeWeed" class="ml-2 block text-sm text-gray-300">Include weed costs</label>
                         </div>
                     </div>
                     
@@ -222,7 +222,7 @@
                 const savePercent = (saveAmount / income) * 100;
                 const totalSavings = saveAmount * periods;
                 
-                // Calculate cannabis costs for the trip
+                // Calculate weed costs for the trip
                 const weedCostPerGram = 12; // Cost in euros
                 const tripDuration = 21; // 3 weeks
                 const weedCost = includeWeed ? gramPerDay * weedCostPerGram * tripDuration : 0;
@@ -237,8 +237,8 @@
                 
                 if (includeWeed) {
                     summaryHTML += `
-                        <p class="mb-2"><strong>Cannabis budget:</strong> €${weedCost.toFixed(2)} (${gramPerDay}g/day for 21 days)</p>
-                        <p class="mb-2"><strong>Total with cannabis:</strong> €${totalCost.toFixed(2)}</p>
+                        <p class="mb-2"><strong>weed budget:</strong> €${weedCost.toFixed(2)} (${gramPerDay}g/day for 21 days)</p>
+                        <p class="mb-2"><strong>Total with weed:</strong> €${totalCost.toFixed(2)}</p>
                     `;
                 }
                 
